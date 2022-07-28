@@ -5,17 +5,18 @@ public class Investidor extends Cliente{
     protected float rendimento;
 
 
-    public int resgatar(){
-
+    public void fazerResgate(float saldo, float investimento){
+        saldo += investimento;
     }
 
 
-    @Override
-    public float getRendimento() {
+    public float getRendimento()
+    {
         return rendimento;
     }
 
-    public void setRendimento(float rendimento) {
+    public void setRendimento(float rendimento)
+    {
         this.rendimento = rendimento;
     }
 }

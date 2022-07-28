@@ -2,18 +2,22 @@ package org.example;
 
 public class ContaCorrente extends Cliente{
 
-    public float transferir(float saldo){
-
-        return saldo;
+    public void fazerTransferencia(float dinheiro, float saldo, Cliente conta, Cliente conta2, float saldo2){
+        if (saldo > dinheiro) {
+            saldo -= dinheiro;
+        }
+        saldo2 += dinheiro;
     }
 
-    public int fazerSaque(float saldo, int dinheiro){
-        saldo = saldo - dinheiro;
+    public float fazerSaque(float saldo, int dinheiro){
+        if (saldo > dinheiro) {
+            saldo -= dinheiro;
+        }
         return dinheiro;
     }
 
-    public int fazerDeposito(float saldo, int dinheiro) {
-        saldo = saldo + dinheiro;
+    public float fazerDeposito(float saldo, int dinheiro) {
+        saldo += dinheiro;
         return saldo;
     }
 }

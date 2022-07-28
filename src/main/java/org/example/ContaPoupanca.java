@@ -2,13 +2,13 @@ package org.example;
 
 public class ContaPoupanca extends Investidor{
 
-    public void fazerAplicações(){
+    public void fazerAplicacaoP(float saldo, float investimento){
+        saldo -= investimento;
 
     }
 
-    public void fazerSaqueP(int input, float saldo) {
-        saldo = this.saldo - input;
+    public float fazerSaqueP(int input, float saldo) {
+        saldo -= input;
+        return input;
     }
-
-
 }
